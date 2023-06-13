@@ -3,7 +3,7 @@ import mysql.connector
 # definimos una clase llamada DatabaseConnection que establece la conexión con la base de datos MySQL
 class DatabaseConnection:
 
-# constructor de la clase "init": El constructor de una clase es un método especial que se llama automáticamente cuando se crea una instancia de la clase. 
+# constructor de la clase --> "init": El constructor de una clase es un método especial que se llama automáticamente cuando se crea una instancia de la clase. 
 # Su propósito principal es inicializar los atributos de la instancia. 
 # El método __init__ se utiliza como el constructor de la clase DatabaseConnection. 
 # Recibe los parámetros host, user, password, port y database, que son los datos necesarios para establecer la conexión con la base de datos. 
