@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: poderjudicial
+-- Host: 127.0.0.1    Database: base_poderjudicial
 -- ------------------------------------------------------
 -- Server version	8.0.28
 
@@ -23,10 +23,12 @@ DROP TABLE IF EXISTS `categorias`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `categorias` (
-  `categoria_id` int NOT NULL AUTO_INCREMENT,
-  `categoria` text NOT NULL,
-  PRIMARY KEY (`categoria_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `ID_categoria` int NOT NULL AUTO_INCREMENT,
+  `categoria` varchar(90) NOT NULL,
+  PRIMARY KEY (`ID_categoria`),
+  UNIQUE KEY `ID_Categorias_UNIQUE` (`ID_categoria`),
+  UNIQUE KEY `Categoria_UNIQUE` (`categoria`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,21 +48,24 @@ DROP TABLE IF EXISTS `normativas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `normativas` (
-  `id_nroRegistro` int NOT NULL AUTO_INCREMENT,
-  `tipo_normativa` varchar(30) NOT NULL,
+  `ID_nroregistro` int NOT NULL AUTO_INCREMENT,
+  `tipo_normativa` varchar(50) NOT NULL,
   `nro_normativa` int NOT NULL,
   `fecha_sancion` date NOT NULL,
   `descripcion` text NOT NULL,
-  `jurisdiccion` varchar(50) NOT NULL,
+  `jurisdiccion` varchar(60) NOT NULL,
   `palabra_clave` varchar(250) NOT NULL,
-  `categoria_id` int NOT NULL,
-  `id_organo_legislativo` int NOT NULL,
-  PRIMARY KEY (`id_nroRegistro`),
-  KEY `materia_normativa_idx` (`categoria_id`),
-  KEY `organo_legislativo_idx` (`id_organo_legislativo`),
-  CONSTRAINT `materia_normativa` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`categoria_id`),
-  CONSTRAINT `normativa_organo_legislativo` FOREIGN KEY (`id_organo_legislativo`) REFERENCES `organoslegislativos` (`id_organo_Legislativo`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `ID_categoria` int NOT NULL,
+  `ID_organo_legislativo` int NOT NULL,
+  PRIMARY KEY (`ID_nroregistro`),
+  UNIQUE KEY `ID_nroNormativas_UNIQUE` (`ID_nroregistro`),
+  UNIQUE KEY `nro_normativa_UNIQUE` (`nro_normativa`),
+  UNIQUE KEY `palabra_clave_UNIQUE` (`palabra_clave`),
+  KEY `ID_categoria_idx` (`ID_categoria`),
+  KEY `ID_organo_legislativo_idx` (`ID_organo_legislativo`),
+  CONSTRAINT `ID_categoria` FOREIGN KEY (`ID_categoria`) REFERENCES `categorias` (`ID_categoria`),
+  CONSTRAINT `ID_organo_legislativo` FOREIGN KEY (`ID_organo_legislativo`) REFERENCES `organoslegislativos` (`ID_organo_legislativo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -80,9 +85,11 @@ DROP TABLE IF EXISTS `organoslegislativos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `organoslegislativos` (
-  `id_organo_Legislativo` int NOT NULL AUTO_INCREMENT,
-  `organo_Legislativo` varchar(45) NOT NULL,
-  PRIMARY KEY (`id_organo_Legislativo`)
+  `ID_organo_legislativo` int NOT NULL AUTO_INCREMENT,
+  `organo_legislativo` varchar(250) NOT NULL,
+  PRIMARY KEY (`ID_organo_legislativo`),
+  UNIQUE KEY `ID_organo_legislativo_UNIQUE` (`ID_organo_legislativo`),
+  UNIQUE KEY `Organo_Legislativo_UNIQUE` (`organo_legislativo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -104,4 +111,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-13 23:31:04
+-- Dump completed on 2023-06-20  7:26:37
