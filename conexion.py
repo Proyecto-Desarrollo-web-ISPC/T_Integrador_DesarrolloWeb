@@ -49,14 +49,14 @@ class DatabaseConnection:
             print("Conexión cerrada.")
 
 connection = DatabaseConnection(
-    host='localhost',
-    user='root', 
-    password='s1nc0d1f1c4r',
-    port='3306',
-    database='poderjudicial'
+    host='****',
+    user='*****', 
+    password='*******',
+    port='****',
+    database='******'
 )
 # Establecer la conexión
-connection.connect()
+# connection.connect()
 
 # Cerrar la conexión
-connection.close()
+# connection.close()
