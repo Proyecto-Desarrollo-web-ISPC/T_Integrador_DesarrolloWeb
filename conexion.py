@@ -56,7 +56,7 @@ connection = DatabaseConnection(
     database='******'
 )
 # Establecer la conexión
-connection.connect()
+# connection.connect()
 
 # Cerrar la conexión
-connection.close()
+# connection.close()
