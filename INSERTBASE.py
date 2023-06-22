@@ -19,11 +19,11 @@ def insertar_categoria(connection, categoria):
 
 # Crear una instancia de DatabaseConnection
 db_connection = DatabaseConnection(
-    host="****",
-    user="****",
-    password="****",
-    port="****",
-    database="****"
+    host="localhost",
+    user="root",
+    password="s1nc0d1f1c4r",
+    port="3306",
+    database="poderjudicial"
 )
 
 # Establecer la conexión con la base de datos
