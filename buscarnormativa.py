@@ -1,4 +1,5 @@
 import mysql.connector
+from mysql.connector import Error
 from conexion import DatabaseConnection         
                         
 def buscar_normativa_por_numero(numero_normativa):
@@ -7,7 +8,7 @@ def buscar_normativa_por_numero(numero_normativa):
     connection = DatabaseConnection(
         host="localhost",
         user="root",
-        password="s1nc0d1f1c4r",
+        password="********",
         port="3306",
         database="poderjudicial"
     )

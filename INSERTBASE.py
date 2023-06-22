@@ -22,7 +22,7 @@ class InsertBase:
         db_connection = DatabaseConnection(
         host="localhost",
         user="root",
-        password="s1nc0d1f1c4r",
+        password="******",
         port="3306",
         database="poderjudicial"
     )
