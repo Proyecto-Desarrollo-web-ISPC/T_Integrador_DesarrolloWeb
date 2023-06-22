@@ -1,11 +1,22 @@
-import mysql.connector          
+import mysql.connector
+from conexion import DatabaseConnection         
                         
 def buscar_normativa_por_numero(numero_normativa):
     # Establecer la conexión con la base de datos
-    conexion = mysql.connector.connect('ProyectoPoder_judicial.sql')
+    # Crear una instancia de DatabaseConnection
+    db_connection = DatabaseConnection(
+        host="localhost",
+        user="root",
+        password="s1nc0d1f1c4r",
+        port="3306",
+        database="poderjudicial"
+    )
 
-    # Crear un cursor para ejecutar consultas
-    cursor = conexion.cursor()
+    # Establecer la conexión con la base de datos
+    db_connection.connect()
+
+    # Obtener el cursor de la conexión
+    cursor = db_connection.connection.cursor()
 
     # Crear la consulta SQL con el número de normativa
     consulta = "SELECT * FROM normativas WHERE nro_normativa = ?"
@@ -24,7 +35,7 @@ def buscar_normativa_por_numero(numero_normativa):
         print(f"Error al buscar la normativa: {error}")
     finally:
         cursor.close()
-        conexion.close()
+        db_connection.close()
 
 #Ejemplo de uso
 numero_normativa_buscar = input("Ingrese el número de normativa a buscar: ")
