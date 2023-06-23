@@ -14,10 +14,10 @@
 
 -Lautaro Pena
 
--Sergio Gabriel Valdiviezo
-
 -Sanchez Abril
 
--Daira Urtubey
-
 -Pablo Scarponi
+
+-Sergio Gabriel Valdiviezo (Cambió de grupo)
+
+-Daira Urtubey (Dejó la carrera)
