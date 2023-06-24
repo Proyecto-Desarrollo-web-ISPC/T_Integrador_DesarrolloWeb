@@ -51,9 +51,15 @@ class DatabaseConnection:
 connection = DatabaseConnection(
     host='localhost',
     user='root', 
-    password='root',
-    port='3306',
-    database='base_poderjudicial'
+
+    password='****',
+    port='****',
+    database='****'
+
+    password='*****',
+    port='****',
+    database='***'
+
 )
 # Establecer la conexión
 connection.connect()
