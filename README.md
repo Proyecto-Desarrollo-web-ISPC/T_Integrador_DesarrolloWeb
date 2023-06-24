@@ -17,3 +17,7 @@
 -Sanchez Abril
 
 -Pablo Scarponi
+
+-Sergio Gabriel Valdiviezo (Cambió de grupo)
+
+-Daira Urtubey (Dejó la carrera)

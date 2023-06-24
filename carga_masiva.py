@@ -6,9 +6,20 @@ from conexion import *
 connection = DatabaseConnection(
     host='localhost',
     user='root', 
+
+
+    password='***',
+    port='****',
+    database='****'
+    password='****',
+    port='****',
+    database='****'
+
+
     password='*************',
-    port='3306',
-    database='newschema'
+    port='****',
+    database='****'
+
     )
 def insertar_categorias(connection, categoria):
     
