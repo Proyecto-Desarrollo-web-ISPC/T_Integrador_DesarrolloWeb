@@ -6,11 +6,11 @@ from conexion import *
 connection = DatabaseConnection(
     host='localhost',
     user='root', 
-    password='root',
+    password='*************',
     port='3306',
-    database='pruebe'
+    database='newschema'
     )
-def insertar_categoria(connection, categoria):
+def insertar_categorias(connection, categoria):
     
     try:
         connection.connect()
@@ -39,7 +39,7 @@ categorias = [
 ]
 
 for categoria in categorias:
- insertar_categoria(connection, categoria)
+    insertar_categorias(connection, categoria)
 
 
 
@@ -91,5 +91,8 @@ Además, la ley establece medidas de seguridad para proteger los datos personale
     except mysql.connector.Error as err:
         print("Error al insertar datos:", err)
     finally:
+
         cursor.close()
         connection.close()
+
+insertar_Normativas()
