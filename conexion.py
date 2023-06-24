@@ -51,9 +51,9 @@ class DatabaseConnection:
 connection = DatabaseConnection(
     host='localhost',
     user='root', 
-    password='*********',
+    password='************',
     port='3306',
-    database='newschema'
+    database='ProyectoPoder_judicial'
 )
 # Establecer la conexión
 connection.connect()
