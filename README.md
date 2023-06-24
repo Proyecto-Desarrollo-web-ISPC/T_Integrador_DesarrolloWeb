@@ -1,10 +1,10 @@
 # Proyecto integrador - Desarrollo Web
-
+--------------------------------------
 ## Integrantes: 
 
--Ma. Victoria Urcola
+-Ma. Victoria Urcola 
 
--Javier Sosa
+-Javier Sosa 
 
 -Lucas Nicolas Torres
 
