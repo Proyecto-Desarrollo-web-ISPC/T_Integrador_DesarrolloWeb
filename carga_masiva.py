@@ -6,9 +6,14 @@ from conexion import *
 connection = DatabaseConnection(
     host='localhost',
     user='root', 
-    password='Delfines/2',
-    port='3306',
-    database='poderj'
+
+    password='***',
+    port='****',
+    database='****'
+    password='****',
+    port='****',
+    database='****'
+
     )
 def insertar_categoria(connection, categoria):
     
