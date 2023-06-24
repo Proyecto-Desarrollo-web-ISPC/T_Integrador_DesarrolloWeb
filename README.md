@@ -1,10 +1,10 @@
 # Proyecto integrador - Desarrollo Web
-
+--------------------------------------
 ## Integrantes: 
 
--Ma. Victoria Urcola
+-Ma. Victoria Urcola 
 
--Javier Sosa
+-Javier Sosa 
 
 -Lucas Nicolas Torres
 
@@ -14,10 +14,6 @@
 
 -Lautaro Pena
 
--Sergio Gabriel Valdiviezo
-
 -Sanchez Abril
-
--Daira Urtubey
 
 -Pablo Scarponi
