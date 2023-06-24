@@ -2,7 +2,7 @@
 
 ## Integrantes: 
 
--Ma. Victoria Urcola  
+-Ma. Victoria Urcola
 
 -Javier Sosa
 
